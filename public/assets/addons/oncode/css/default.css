@@ -389,5 +389,6 @@ ul {
 
 .uk-button-primary {
     background-color: #ffd700 !important;
-    color: #fff !important;
+    color: #000 !important;
+    margin: 10px 0 !important;
 }
