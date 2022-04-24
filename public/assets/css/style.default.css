@@ -589,7 +589,7 @@ html.dark
 
 .uk-section-secondary {
     background-color: #161b22 !important;
-    background-image: url(/public/assets/images/bg.webp);
+    background-image: url(/public/assets/images/bg.webp) !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
