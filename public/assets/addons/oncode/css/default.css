@@ -361,12 +361,7 @@ table {
     color: var(--text-color);
 }
 
-.uk-h1 {
-    color: #ffd700 !important;
-}
-
-
-.uk-link {
+.uk-text-primary {
     color: #ffd700 !important;
 }
 

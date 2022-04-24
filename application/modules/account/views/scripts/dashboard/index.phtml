@@ -1,11 +1,17 @@
 <div class="uk-section">
     <div uk-grid>
         <div class="uk-width-1-2">
-            <h1 class="uk-h1">
+            <h1 class="uk-h1 uk-text-primary">
                 Bem vindo<br />
                 <?php echo Zend_Auth::getInstance()->getIdentity()->name_user ?>
             </h1>
-            <a class="uk-link" href="/account/user">Ficha completa</a>
+            <a class="uk-link uk-text-primary" href="/account/user">Ficha completa</a>
+            <h2 class="uk-h2 uk-text-primary">Conquistas</h2>
+            <ul class="uk-list uk-text-primary">
+                <li>TOP SELLER JANEIRO</li>
+                <li>CAMPANHA BLACK WEEK</li>
+                <li>TOP SELLER DEZEMBRO</li>
+            </ul>
         </div>
         <div class="uk-width-1-2">
             <div uk-slideshow="animation: push">
@@ -28,93 +34,4 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="column">
-            <div class="ui segment">
-                <h4 class="ui header">Promoções</h4>
-                <div class="ui three column grid">
-                    <div class="column">
-                        <div class="ui segment">
-                            <div class="ui inverted placeholder">
-                                <div class="paragraph">
-                                    <div class="medium line"></div>
-                                    <div class="short line"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <div class="ui inverted placeholder">
-                                <div class="paragraph">
-                                    <div class="medium line"></div>
-                                    <div class="short line"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <div class="ui inverted placeholder">
-                                <div class="paragraph">
-                                    <div class="medium line"></div>
-                                    <div class="short line"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <h4 class="ui header">Resumo de Vendas</h4>
-    <div class="row">
-        <div class="twelve wide column">
-            <div class="ui three column grid">
-                <div class="column">
-                    <div class="ui segment">
-                        <div class="ui inverted placeholder">
-                            <div class="paragraph">
-                                <div class="medium line"></div>
-                                <div class="short line"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui segment">
-                        <div class="ui inverted placeholder">
-                            <div class="paragraph">
-                                <div class="medium line"></div>
-                                <div class="short line"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui segment">
-                        <div class="ui inverted placeholder">
-                            <div class="paragraph">
-                                <div class="medium line"></div>
-                                <div class="short line"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr />
-    <div class="row">
-        <div class="twelve wide column">
-            <div class="ui segment">
-                <figure class="highcharts-figure">
-                    <div id="on-container-in-out">
-                        <h6 class="uk-h6 uk-margin-remove uk-text-center">Carregando...</h6>
-                    </div>
-                </figure>
-            </div>
-        </div>
-    </div>
-
 </div>
