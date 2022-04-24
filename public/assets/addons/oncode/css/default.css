@@ -312,6 +312,7 @@ body.dark .switch::before{
 .home .content{
     color: var(--text-color);
     padding: 12px 60px;
+    overflow: auto;
 }
 
 .sidebar.close ~ .home{
