@@ -9,7 +9,7 @@ class Account_UserController extends Zend_Controller_Action {
     }
 
     public function indexAction() {
-        $this->_helper->layout->setLayout('layout_app');
+        $this->_helper->layout->setLayout('layout_webapp');
         $this->view->id_module = 100;
         $this->view->title_page = 'Info. da Conta';
         $this->view->description_page = 'Gerenciamento de informações';
