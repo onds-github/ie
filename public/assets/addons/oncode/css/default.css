@@ -386,3 +386,8 @@ ul {
 .ui.form label {
     color: #ffd700 !important;
 }
+
+.uk-button-primary {
+    background-color: #ffd700 !important;
+    color: #fff !important;
+}
