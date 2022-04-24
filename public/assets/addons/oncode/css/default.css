@@ -372,3 +372,11 @@ table {
 ul {
     padding-left: 0 !important;
 }
+
+.ui.form input {
+    border: 2px #ffd700 solid !important;
+}
+
+.ui.form label {
+    color: #ffd700 !important;
+}
