@@ -1,189 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="/public/assets/addons/semantic/semantic.min.css" />
-        <link rel="stylesheet" href="/public/assets/addons/uikit/uikit.min.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="/public/assets/addons/datatables/dataTables.semantic.min.css" />
-        <link rel="stylesheet" href="/public/assets/addons/datatables/dataTables.select.min.css" />
-        <link rel="stylesheet" href="/public/assets/addons/datatables/dataTables.buttons.min.css" />
-        
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css">
+    <link rel="stylesheet" href="/public/assets/addons/semantic/semantic.min.css" />
+    <link rel="stylesheet" href="/public/assets/addons/uikit/uikit.min.css" />
+
+    <link rel="stylesheet" href="/public/assets/addons/datatables/dataTables.semantic.min.css" />
+    <link rel="stylesheet" href="/public/assets/addons/datatables/dataTables.select.min.css" />
+    <link rel="stylesheet" href="/public/assets/addons/datatables/dataTables.buttons.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css">
 
 
-        <!----======== CSS ======== -->
-        <link rel="stylesheet" href="/public/assets/addons/oncode/css/default.css?v=<?php echo time() ?>">
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/public/assets/addons/oncode/css/default.css?v=<?php echo time() ?>">
 
-        <!----===== Boxicons CSS ===== -->
-        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Dashboard - on360</title> 
-    </head>
-    <body>
-        <nav class="sidebar">
-            <header>
-                <div class="image-text" style="width: 100%">
-                        <img class="uk-width-1-1" src="/public/assets/images/logotipo.webp" alt="Logotipo" />
-                    
-                </div>
-            </header>
+    <title>Dashboard - on360</title>
+</head>
 
-            <div class="menu-bar">
-                <div class="menu">
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text" style="width: 100%">
+                <img class="uk-width-1-1" src="/public/assets/images/logotipo.webp" alt="Logotipo" />
+            </div>
+        </header>
 
-                    <ul class="menu-links">
-                        <li class="nav-link">
-                            <a href="/account/dashboard">
-                                <i class="bx bx-home-alt icon"></i>
-                                <span class="text nav-text">Dashboard</span>
-                            </a>
-                        </li>
+        <div class="menu-bar">
+            <div class="menu">
 
-                        <li class="nav-link">
-                            <a href="/account/user">
-                                <i class="bx bx-user icon" ></i>
-                                <span class="text nav-text">Perfil</span>
-                            </a>
-                        </li>
-
-                        <li class="nav-link">
-                            <a href="/account/promotion">
-                                <i class="bx bx-tag icon"></i>
-                                <span class="text nav-text">Promoções</span>
-                            </a>
-                        </li>
-<div class="uk-section">
-    <div uk-grid>
-        <div class="uk-width-1-2">
-            <h1 class="uk-h1 uk-text-uppercase uk-text-primary uk-margin-remove-bottom">
-                Bem vindo
-            </h1>
-                        <li class="nav-link">
-                            <a href="/account/courses">
-                                <i class="bx bx-lock-alt icon"></i>
-                                <span class="text nav-text">Bloqueios</span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div class="bottom-content">
-                    <li class="">
-                        <a href="">
-                            <i class='bx bx-log-out icon' ></i>
-                            <span class="text nav-text">Logout</span>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="/account/dashboard">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
 
-                    <!-- <li class="mode">
-                        <div class="sun-moon">
-                            <i class='bx bx-moon icon moon'></i>
-                            <i class='bx bx-sun icon sun'></i>
-                        </div>
-                        <span class="mode-text text">Dark mode</span>
+                    <li class="nav-link">
+                        <a href="/account/user">
+                            <i class="bx bx-user icon"></i>
+                            <span class="text nav-text">Perfil</span>
+                        </a>
+                    </li>
 
-                        <div class="toggle-switch">
-                            <span class="switch"></span>
-                        </div>
-                    </li> -->
+                    <li class="nav-link">
+                        <a href="/account/promotion">
+                            <i class="bx bx-tag icon"></i>
+                            <span class="text nav-text">Promoções</span>
+                        </a>
+                    </li>
 
-                </div>
+                    <li class="nav-link">
+                        <a href="/account/access/out">
+                            <i class='bx bx-log-out icon'></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
+        </div>
 
-        </nav>
+    </nav>
 
-        <section class="home">
-            <div class="content">
+    <section class="home">
+        <div class="content">
             <?php echo $this->layout()->content; ?>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <script type="text/javascript" src="/public/assets/addons/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/semantic/semantic.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/contextmenu/contextmenu.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/uikit/js/uikit.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/uikit/js/uikit-icons.min.js"></script>
-
-
-        <script type="text/javascript" src="/public/config/default.js"></script>
-        
-        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.default.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.semantic.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.sorting.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.rowgroup.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.select.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.buttons.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.buttons.html5.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.buttons.colVis.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.pdfmake.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.vfs_fonts.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.jszip.min.js"></script>
-        
-        
-        <script type="text/javascript" src="/public/assets/addons/moment/moment.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/moment/moment-locales.js"></script>
-
-        <script type="text/javascript" src="/public/assets/addons/numeral/numeral.min.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/numeral/numeral-locales.js"></script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
-        
-        
-        <script type="text/javascript" src="/public/assets/addons/oncrud/script.onFilter.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/oncrud/script.onCreate.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/oncrud/script.onUpdate.js"></script>
-        <script type="text/javascript" src="/public/assets/addons/oncrud/script.onDelete.js"></script>
-                
-                
-                
-        
-        
-        
-        <?php
-            echo $this->headScript();
-        ?>
+    <script type="text/javascript" src="/public/assets/addons/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/semantic/semantic.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/contextmenu/contextmenu.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/uikit/js/uikit.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/uikit/js/uikit-icons.min.js"></script>
 
 
-<script>
-            const body = document.querySelector('body'),
-                    sidebar = body.querySelector('nav'),
-                    toggle = body.querySelector(".toggle"),
-                    searchBtn = body.querySelector(".search-box"),
-                    modeSwitch = body.querySelector(".toggle-switch"),
-                    modeText = body.querySelector(".mode-text");
+    <script type="text/javascript" src="/public/config/default.js"></script>
+
+    <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.default.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.semantic.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.sorting.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.rowgroup.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.select.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.buttons.html5.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.buttons.colVis.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.pdfmake.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.vfs_fonts.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.jszip.min.js"></script>
+
+
+    <script type="text/javascript" src="/public/assets/addons/moment/moment.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/moment/moment-locales.js"></script>
+
+    <script type="text/javascript" src="/public/assets/addons/numeral/numeral.min.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/numeral/numeral-locales.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
+
+
+    <script type="text/javascript" src="/public/assets/addons/oncrud/script.onFilter.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/oncrud/script.onCreate.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/oncrud/script.onUpdate.js"></script>
+    <script type="text/javascript" src="/public/assets/addons/oncrud/script.onDelete.js"></script>
 
 
 
-            if (getCookie('mode') == 'dark') {
-                body.classList.toggle("dark");
+
+
+
+    <?php
+    echo $this->headScript();
+    ?>
+
+
+    <script>
+        const body = document.querySelector('body'),
+            sidebar = body.querySelector('nav'),
+            toggle = body.querySelector(".toggle"),
+            searchBtn = body.querySelector(".search-box"),
+            modeSwitch = body.querySelector(".toggle-switch"),
+            modeText = body.querySelector(".mode-text");
+
+
+
+        if (getCookie('mode') == 'dark') {
+            body.classList.toggle("dark");
+        }
+
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        })
+
+        searchBtn.addEventListener("click", () => {
+            sidebar.classList.remove("close");
+        })
+
+        modeSwitch.addEventListener("click", () => {
+            body.classList.toggle("dark");
+
+            if (body.classList.contains("dark")) {
+                modeText.innerText = "Light mode";
+                setCookie('mode', 'dark', 365);
+            } else {
+                modeText.innerText = "Dark mode";
+                setCookie('mode', 'light', 365);
             }
+        });
+    </script>
 
-            toggle.addEventListener("click", () => {
-                sidebar.classList.toggle("close");
-            })
+</body>
 
-            searchBtn.addEventListener("click", () => {
-                sidebar.classList.remove("close");
-            })
-
-            modeSwitch.addEventListener("click", () => {
-                body.classList.toggle("dark");
-
-                if (body.classList.contains("dark")) {
-                    modeText.innerText = "Light mode";
-                    setCookie('mode', 'dark', 365);
-                } else {
-                    modeText.innerText = "Dark mode";
-                    setCookie('mode', 'light', 365);
-                }
-            });
-        </script>
-
-    </body>
 </html>
