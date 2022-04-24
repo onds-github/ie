@@ -1,0 +1,276 @@
+<?php echo $this->doctype('HTML5') ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+
+    <head>
+
+        <?php
+        echo $this->headTitle($this->title_page);
+
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1')
+                ->setHttpEquiv('Content-Type', 'text/html;charset=UTF-8')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+                ->appendHttpEquiv('language', 'pt-BR')
+                ->appendName('robots', 'index, follow')
+                ->appendName('title', $this->title)
+                ->appendName('description', $this->description_page);
+
+        echo $this->headLink()
+                ->appendStylesheet('/public/assets/addons/semantic/semantic.min.css')
+                ->appendStylesheet('/public/assets/addons/uikit/uikit.min.css')
+                ->appendStylesheet('/public/assets/css/style.institutional.css?v=1');
+        ?>
+        <!-- Search Engine -->
+        <meta name="image" content="/public/assets/images/logotipo/logotipo.svg" />
+        <!-- Schema.org for Google -->
+        <meta itemprop="name" content="<?php echo $this->title_page ?>" />
+        <meta itemprop="description" content="<?php echo $this->description_page ?>" />
+        <meta name="image" content="/public/assets/images/logotipo/logotipo.svg" />
+        <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+        <meta name="og:title" content="<?php echo $this->title_page ?>" />
+        <meta name="og:description" content="<?php echo $this->title_page ?>" />
+        <meta name="image" content="/public/assets/images/logotipo/logotipo.svg" />
+        <meta name="og:url" content="https://onds.com.br" />
+        <meta name="og:site_name" content="<?php echo $this->title_page ?>" />
+        <meta name="og:locale" content="pt_BR" />
+        <meta name="fb:admins" content="onds.agenciadigital" />
+        <meta name="og:type" content="website" />
+        <link rel="icon" href="/public/assets/images/logotipo/logotipo.svg" />
+        
+        <meta name="facebook-domain-verification" content="nmcek977htvms5et1bowczs1czx50p" />
+    </head>
+
+    <body>
+        <script type="application/ld+json">
+            {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "ONDS - Agência Digital",
+            "url": "https://onds.com.br/",
+            "address": "Rua Elias Antonio Zogbi, 150. Santo Amaro. São Paulo - SP. 04746-115",
+            "sameAs": [
+            "https://www.facebook.com/onds.agenciadigital/",
+            "https://www.instagram.com/onds.agenciadigital/",
+            "https://www.linkedin.com/company/onds-agenciadigital"
+            ]
+            }
+        </script>
+
+        <div id="on-offcanvas-menu" uk-offcanvas="flip: true">
+            <div class="uk-offcanvas-bar uk-background-secondary">
+
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+                <a class="uk-navbar-item uk-logo">
+                    <img class="uk-width-1-2" src="/public/assets/images/logotipo/logotipo.svg" alt="Logotipo" />
+                </a>
+
+                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-large">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#inicio">Sobre</a></li>
+                    <li>
+                        <a href="#">Serviços</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="/nossos-servicos/criacao-de-sites">Criação de Sites</a></li>
+                                <li><a href="/nossos-servicos/criacao-de-loja-virtual">Criação de Loja Virtual</a></li>
+                                <li><a href="/nossos-servicos/criacao-de-aplicativos">Criação de Aplicativos</a></li>
+                                <li><a href="/nossos-servicos/gestao-de-trafego-pago">Gestão de Tráfego Pago</a></li>
+                                <li><a href="/nossos-servicos/gestao-de-midias-sociais">Gestão de Mídiais Sociais</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Produtos</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="/nossos-servicos/criacao-de-sites">Hospedagem de Sites</a></li>
+                                <li><a href="/nossos-servicos/criacao-de-loja-virtual">on360</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#projetos">Blog</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <ul class="uk-nav uk-nav-primary uk-nav-center">
+                    <li>
+                        <a href="https://onds.dev/account/access" target="_blank">
+                            <button class="uk-button uk-button-primary">Painel do Cliente</button>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="uk-iconnav uk-flex-center uk-margin-large">
+                    <li>
+                        <a target="_blank" class="uk-icon-button uk-button-primary" href="https://www.instagram.com/onds.agenciadigital/" target="_blank">
+                            <span uk-icon="icon: instagram;"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="uk-icon-button uk-button-primary" href="https://www.facebook.com/onds.agenciadigital/" target="_blank">
+                            <span uk-icon="icon: facebook;"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" class="uk-icon-button uk-button-primary" href="https://www.linkedin.com/company/onds-agenciadigital/" target="_blank">
+                            <span uk-icon="icon: linkedin;"></span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+
+        <nav class="uk-navbar-container uk-navbar-transparent uk-background-primary on-border-bottom">
+            <div class="uk-container">
+                <div uk-navbar>
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav">
+                            <li><a target="_blank" href="https://api.whatsapp.com/send?1=pt_br&phone=5511953270722"><span class="uk-icon-button" uk-icon="icon: whatsapp"></span></a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/onds.agenciadigital/"><span class="uk-icon-button" uk-icon="icon: instagram"></span></a></li>
+                            <li><a target="_blank" href="https://www.facebook.com/onds.agenciadigital/"><span class="uk-icon-button" uk-icon="icon: facebook"></span></a></li>
+                            <li><a target="_blank" href="https://www.linkedin.com/company/onds-agenciadigital/"><span class="uk-icon-button" uk-icon="icon: linkedin"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+        <nav class="uk-navbar-container uk-navbar-transparent uk-background-secondary on-border-bottom">
+            <div class="uk-container">
+                <div uk-navbar="mode: click">
+                    <div class="uk-navbar-left">
+                        <a class="uk-navbar-item uk-logo">
+                            <img width="64" src="/public/assets/images/logotipo/logotipo.svg" alt="Logotipo" />
+                            <div>
+                                ONDS
+                                <div class="uk-navbar-subtitle">Agência Digital</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="uk-navbar-center">
+                        <ul class="uk-navbar-nav">
+                            <li class="uk-visible@s"><a href="#inicio">Início</a></li>
+                            <li class="uk-visible@s"><a href="#projetos">Sobre</a></li>
+                            <li>
+                                <a href="#">Serviços</a>
+                                <div class="uk-navbar-dropdown">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li><a href="/nossos-servicos/criacao-de-sites">Criação de Sites</a></li>
+                                        <li><a href="/nossos-servicos/criacao-de-loja-virtual">Criação de Loja Virtual</a></li>
+                                        <li><a href="/nossos-servicos/criacao-de-aplicativos">Criação de Aplicativos</a></li>
+                                        <li><a href="/nossos-servicos/gestao-de-trafego-pago">Gestão de Tráfego Pago</a></li>
+                                        <li><a href="/nossos-servicos/gestao-de-midias-sociais">Gestão de Mídiais Sociais</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">Produtos</a>
+                                <div class="uk-navbar-dropdown">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li><a href="/nossos-servicos/criacao-de-sites">Hospedagem de Sites</a></li>
+                                        <li><a href="/nossos-servicos/criacao-de-loja-virtual">on360</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="uk-visible@s"><a href="#projetos">Blog</a></li>
+                            <li class="uk-visible@s"><a href="#contato">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav">
+                            <li class="uk-visible@s">
+                                <a href="https://onds.dev/account/access" target="_blank">
+                                    <button class="uk-button uk-button-primary">Painel do Cliente</button>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="uk-navbar-item uk-hidden@s">
+                            <button class="uk-icon-button uk-button-default" uk-toggle="target: #on-offcanvas-menu" type="button">
+                                <span uk-icon="icon: menu"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+        <?php echo $this->layout()->content; ?>
+
+        <footer class="uk-section uk-background-secondary">
+            <div class="uk-container">
+                <div class="uk-child-width-1-3@s" uk-grid>
+                    <div>
+                        <a class="uk-logo uk-display-inline-block">
+                            <img width="64" src="/public/assets/images/logotipo/logotipo.svg" alt="Logotipo" />
+                        </a>
+                        <p class="uk-text-lead">Somos uma <strong>Agência Digital</strong> especializada em <strong>Criar e Gerenciar Sites</strong> que ajudam no processo de coleta, organização, análise, compartilhamento e monitoramento de informações para divulgação e venda de produtos ou serviços.</p>
+                        <hr class="uk-divider-small" />
+                        <ul class="uk-iconnav">
+                            <li>
+                                <a target="_blank" class="uk-icon-button uk-button-primary" href="https://www.instagram.com/onds.agenciadigital/" target="_blank">
+                                    <span uk-icon="icon: instagram;"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" class="uk-icon-button uk-button-primary" href="https://www.facebook.com/onds.agenciadigital/" target="_blank">
+                                    <span uk-icon="icon: facebook;"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" class="uk-icon-button uk-button-primary" href="https://www.linkedin.com/company/onds-agenciadigital/" target="_blank">
+                                    <span uk-icon="icon: linkedin;"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="uk-h4">Interno</h4>
+                        <ul class="uk-nav">
+                            <li><a target="_blank" href="https://onds.dev/account/access/">Painel de Cliente</a></li>
+                            <li><a target="_blank" href="http://webmail.onds.com.br/">Webmail</a></li>
+                        </ul>
+                        <h4 class="uk-h4">Úteis</h4>
+                        <ul class="uk-nav">
+                            <li><a target="_blank" href="https://registro.br/2/whois">Consultar Domínio</a></li>
+                            <li><a target="_blank" href="https://github.com/">Repositório</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="uk-h4">Parceiros</h4>
+                        <ul class="uk-nav">
+                            <li><a target="_blank" href="https://goo.gl/KDikMN">G Suite</a></li>
+                            <li><a target="_blank" href="https://www.jivochat.com.br/?partner_id=25512&pricelist_id=114&lang=pt">JivoChat</a></li>
+                            <li><a target="_blank" href="https://king.host?ref=59664DC81CAC5">Kinghost</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div uk-grid>
+                    <div class="uk-width-1-1 uk-text-center">
+                        <p class="uk-text-meta"><?php echo date('Y') ?> © ONDS - Agência Digital. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <?php
+        echo $this->headScript()
+                ->prependFile('/public/assets/addons/semantic/semantic.min.js')
+                ->prependFile('/public/assets/addons/uikit/uikit-icons.min.js')
+                ->prependFile('/public/assets/addons/uikit/uikit.min.js')
+                ->prependFile('/public/config/default.js')
+                ->prependFile('/public/assets/addons/mask/mask.min.js')
+                ->prependFile('/public/assets/addons/jquery/jquery.min.js');
+        ?>
+
+
+
+
+    </body>
+
+</html>

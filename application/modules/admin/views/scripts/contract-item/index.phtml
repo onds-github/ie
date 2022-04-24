@@ -1,0 +1,117 @@
+
+<div class="uk-grid-small" uk-grid>
+    <div class="uk-width-medium@s">
+
+        <ul class="uk-tab uk-tab-left uk-visible@s">
+            <li><a href="/admin/company/details?id_company=<?php echo $_GET['id_company'] ?>">Info. do cliente</a></li>
+            <li class="uk-active"><a href="#">Módulos</a></li>
+        </ul>
+
+    </div>
+    <div class="uk-width-expand@s">
+
+
+        <ul class="uk-tab uk-hidden@s">
+            <li><a href="/admin/company/details?id_company=<?php echo $_GET['id_company'] ?>">Info. do cliente</a></li>
+            <li class="uk-active"><a href="#">Módulos</a></li>
+        </ul>
+
+        <div class="uk-card uk-card-body uk-card-default uk-card-small uk-margin-bottom">
+            <button class="ui labeled icon primary button on-button-insert">
+                <span class="material-icons">add</span> Novo registro
+            </button>
+        </div>
+
+        <div class="uk-card uk-card-body uk-card-default uk-card-small">
+            <table class="ui table on-table-contract-item">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Módulo</th>
+                        <th>Nome personalizado</th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="ui small modal on-modal-insert">
+    <div class="header">Novo registro</div>
+    <div class="content">
+        <form class="ui form on-form-insert">
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s">
+                    <div class="field required">
+                        <label>Módulo</label>
+                        <div class="ui search selection dropdown on-module-dropdown">
+                            <input type="hidden" name="id_module">
+                            <i class="dropdown icon"></i>
+                            <input type="text" class="search" tabindex="0" />
+                            <span class="sizer"></span>
+                            <div class="default text">Selecione...</div>
+                            <div class="menu" tabindex="-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@s">
+                    <div class="field required">
+                        <label>Nome personalizado</label>
+                        <input type="text" name="name_contract_item" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><span class="material-icons">close</span> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><span class="material-icons">save</span> Salvar</button>
+    </div>
+</div>
+
+<div class="ui small modal on-modal-update">
+    <div class="header">Atualizar registro</div>
+    <div class="content">
+        <form class="ui form on-form-update">
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s">
+                    <div class="field required">
+                        <label>Módulo</label>
+                        <div class="ui search selection dropdown on-module-dropdown">
+                            <input type="hidden" name="id_module">
+                            <i class="dropdown icon"></i>
+                            <input type="text" class="search" tabindex="0" />
+                            <span class="sizer"></span>
+                            <div class="default text">Selecione...</div>
+                            <div class="menu" tabindex="-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-2@s">
+                    <div class="field required">
+                        <label>Nome personalizado</label>
+                        <input type="text" name="name_contract_item" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><span class="material-icons">close</span> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><span class="material-icons">save</span> Salvar</button>
+    </div>
+</div>
+
+
+<div class="ui small modal on-modal-delete">
+    <div class="header">Confirmar exclusão</div>
+    <div class="content uk-text-center">
+        <p class="uk-text-meta">Você tem certeza que deseja excluir o registro?</p>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><span class="material-icons">close</span> Cancelar</button>
+        <button class="ui labeled icon red ok button"><span class="material-icons">done</span> Excluir</button>
+    </div>
+</div>

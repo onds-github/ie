@@ -1,0 +1,175 @@
+<div class="row">
+    <div class="column">
+        <div class="ui breadcrumb">
+            <a class="section" href="/account/dashboard">Início</a>
+            <div class="divider"> / </div>
+            <div class="active section"><?php echo $this->title_page ?></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="column">
+        <div class="ui segment">
+            <table class="ui celled selectable table" id="onTableContact">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Nome</th>
+                        <th>Documento</th>
+                        <th>E-mail</th>
+                        <th>Telefone</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="ui small modal" id="onModalCreate">
+    <div class="header">Novo registro</div>
+    <div class="content">
+        <form class="ui equal width form">
+            <div class="fields">
+                <div class="six wide field required">
+                    <label>Documento</label>
+                    <input type="text" name="document_contact" maxlength="18" />
+                </div>
+            </div>
+            <div class="fields">
+                <div class="eight wide field required">
+                    <label>Nome / Razão Social</label>
+                    <input type="text" name="name_contact" maxlength="256" />
+                </div>
+                <div class="eight wide field required">
+                    <label>Apelido / Nome Fantasia</label>
+                    <input type="text" name="nickname_contact" />
+                </div>
+            </div>
+            <div class="fields">
+                <div class="eight wide field required">
+                    <label>E-mail</label>
+                    <input type="text" name="email_contact" />
+                </div>
+                <div class="eight wide field required">
+                    <label>Telefone</label>
+                    <input type="text" name="phone_primary_contact" class="on-mask-phone" />
+                </div>
+            </div>
+            <div class="fields">
+                <div class="eight wide field required">
+                    <label>CEP</label>
+                    <input type="text" name="adress_zipcode_contact" />
+                </div>
+            </div>
+            <div class="fields">
+                <div class="ten wide field">
+                    <label>Logradouro</label>
+                    <input type="text" name="adress_public_place_contact" />
+                </div>
+                <div class="six wide field">
+                    <label>Número</label>
+                    <input type="text" name="adress_public_place_contact" />
+                </div>
+            </div>
+            <div class="fields">
+                <div class="eight wide field">
+                    <label>Complemento</label>
+                    <input type="text" name="adress_complement_contact" />
+                </div>
+            </div>
+            <div class="fields">
+                <div class="eight wide field">
+                    <label>Bairro</label>
+                    <input type="text" name="adress_district_contact" />
+                </div>
+                <div class="six wide field">
+                    <label>Cidade</label>
+                    <input type="text" name="adress_city_contact" />
+                </div>
+                <div class="two wide field">
+                    <label>UF</label>
+                    <input type="text" name="adress_state_contact" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Salvar</button>
+    </div>
+</div>
+
+<div class="ui small modal" id="onModalUpdate">
+    <div class="header">Atualizar registro</div>
+    <div class="content">
+        <form class="ui equal width form">
+            <div class="fields">
+                <div class="six wide field required">
+                    <label>Documento</label>
+                    <input type="text" name="document_contact" maxlength="18" />
+                </div>
+            </div>
+            <div class="fields">
+                <div class="eight wide field required">
+                    <label>Nome / Razão Social</label>
+                    <input type="text" name="name_contact" maxlength="256" />
+                </div>
+                <div class="eight wide field required">
+                    <label>Apelido / Nome Fantasia</label>
+                    <input type="text" name="nickname_contact" />
+                </div>
+            </div>
+            <div class="fields">
+                <div class="eight wide field required">
+                    <label>E-mail</label>
+                    <input type="text" name="email_contact" />
+                </div>
+                <div class="eight wide field required">
+                    <label>Telefone</label>
+                    <input type="text" name="phone_primary_contact" class="on-mask-phone" />
+                </div>
+            </div>
+            <div class="fields">
+                <div class="eight wide field required">
+                    <label>CEP</label>
+                    <input type="text" name="adress_zipcode_contact" />
+                </div>
+            </div>
+            <div class="fields">
+                <div class="ten wide field">
+                    <label>Logradouro</label>
+                    <input type="text" name="adress_public_place_contact" />
+                </div>
+                <div class="six wide field">
+                    <label>Número</label>
+                    <input type="text" name="adress_public_place_contact" />
+                </div>
+            </div>
+            <div class="fields">
+                <div class="eight wide field">
+                    <label>Complemento</label>
+                    <input type="text" name="adress_complement_contact" />
+                </div>
+            </div>
+            <div class="fields">
+                <div class="eight wide field">
+                    <label>Bairro</label>
+                    <input type="text" name="adress_district_contact" />
+                </div>
+                <div class="six wide field">
+                    <label>Cidade</label>
+                    <input type="text" name="adress_city_contact" />
+                </div>
+                <div class="two wide field">
+                    <label>UF</label>
+                    <input type="text" name="adress_state_contact" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Salvar</button>
+    </div>
+</div>

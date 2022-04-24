@@ -1,0 +1,52 @@
+<div class="uk-visible@s" uk-grid>
+    <div class="uk-width-expand@s">
+        <ul class="uk-breadcrumb">
+            <li><a href="<?php echo $this->baseUrl('account') ?>">Início</a></li>
+            <li><a href="<?php echo $this->baseUrl('project') ?>">Projeto: <b class="site">...</b></a></li>
+            <li><a href="<?php echo $this->baseUrl('support') ?>">Suporte</a></li>
+            <li><span><?php echo $this->title ?></span></li>
+        </ul>
+    </div>
+</div>
+<hr class="uk-divider-small uk-visible@s" />
+<div uk-grid>
+    <div class="uk-width-medium@s  uk-visible@m">
+        <div class="uk-card uk-card-default uk-card-body uk-border-rounded">
+            <ul class="uk-nav-default uk-nav-parent-icon" uk-nav>
+                <?php echo $this->menu($this->title, 2) ?>
+            </ul>
+        </div>
+    </div>
+    <div class="uk-width-expand@s">
+        <div class="uk-card uk-card-primary uk-card-body uk-card-small uk-border-rounded uk-margin-bottom">
+            <div uk-grid>
+                <div class="uk-width-1-2@s">
+                    <h4 class="uk-h4 uk-margin-remove-bottom">Ticket: <b class="descricao_type">...</b></h4>
+                </div>
+            </div>
+            <hr class="uk-divider-small" />
+            <div uk-grid>
+                <div class="uk-width-1-2@s">
+                    <p class="uk-text-meta uk-margin-remove-top">Criado há: <br /><b class="data_hora">...</b></p>
+                </div>
+                <div class="uk-width-1-2@s">
+                    <p class="uk-text-meta uk-margin-remove-top">Status: <br /><b class="status">...</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="uk-card uk-card-default uk-card-small uk-border-rounded">
+            <div class="uk-card-body uk-padding-remove">
+                <table class="uk-table uk-table-divider uk-table-hover" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th><span uk-icon="icon: hashtag"></span></th>
+                            <th>Tarefas</th>
+                            <th>Serviços</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

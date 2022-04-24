@@ -1,0 +1,151 @@
+
+<div uk-grid>
+    <div class="uk-width-1-1@s">
+        <div class="uk-panel uk-margin-bottom">
+            <ul class="uk-breadcrumb uk-light">
+                <li><a href="/account/dashboard">Início</a></li>
+                <li><a href="/project/project-task">Tarefas</a></li>
+                <li><span><?php echo $this->title_page ?></span></li>
+            </ul>
+        </div>
+
+        <div class="uk-panel uk-margin-bottom">
+
+            <button class="ui primary button on-button-insert">
+                Novo Registro
+            </button>
+
+        </div>
+
+        <div class="uk-card uk-card-body uk-card-muted uk-card-small uk-margin-bottom uk-light">
+
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-3@s">
+                    <h6 class="uk-h6 uk-margin-remove">Tarefa</h6>
+                    <p class="uk-text-meta uk-margin-remove name_project_task">...</p>
+                </div>
+                <div class="uk-width-1-3@s">
+                    <h6 class="uk-h6 uk-margin-remove">Projeto</h6>
+                    <p class="uk-text-meta uk-margin-remove name_project">...</p>
+                </div>
+                <div class="uk-width-1-3@s">
+                    <h6 class="uk-h6 uk-margin-remove">Status</h6>
+                    <p class="uk-text-meta uk-margin-remove name_project_task_status">...</p>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-3@s">
+                    <h6 class="uk-h6 uk-margin-remove">Início</h6>
+                    <p class="uk-text-meta uk-margin-remove date_start_project_task">...</p>
+                </div>
+                <div class="uk-width-1-3@s">
+                    <h6 class="uk-h6 uk-margin-remove">Término</h6>
+                    <p class="uk-text-meta uk-margin-remove date_finish_project_task">...</p>
+                </div>
+                <div class="uk-width-1-3@s">
+                    <h6 class="uk-h6 uk-margin-remove">Valor</h6>
+                    <p class="uk-text-meta uk-margin-remove price_project_task">...</p>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-3@s">
+                    <h6 class="uk-h6 uk-margin-remove">Observação</h6>
+                    <p class="uk-text-meta uk-margin-remove observation_project_task">...</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="uk-card uk-card-body uk-card-muted uk-card-small">
+            <table class="ui inverted very basic compact table on-table-project-task-checklist">
+                <thead class="transition hidden">
+                    <tr>
+                        <th>ID</th>
+                        <th>Checklist</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="ui small modal on-modal-insert">
+    <div class="header">Novo Registro</div>
+    <div class="content">
+        <form class="ui form on-form-insert">
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-2-3@s">
+                    <div class="field">
+                        <label>Item</label>
+                        <input type="text" name="name_project_task_checklist" maxlength="256" />
+                    </div>
+                </div>
+                <div class="uk-width-1-3@s">
+                    <div class="field required">
+                        <label>Status</label>
+                        <div class="ui selection dropdown on-check-project-task-checklist-dropdown">
+                            <input type="hidden" name="check_project_task_checklist" />
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Selecione...</div>
+                            <div class="menu">
+                                <div class="item" data-value="0">Pendente</div>
+                                <div class="item" data-value="1">Concluído</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Salvar</button>
+    </div>
+</div>
+
+<div class="ui small modal on-modal-update">
+    <div class="header">Atualizar Registro</div>
+    <div class="content">
+        <form class="ui form on-form-update">
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s">
+                    <div class="field">
+                        <label>Item</label>
+                        <input type="text" name="name_project_task_checklist" maxlength="256" />
+                    </div>
+                </div>
+                <div class="uk-width-1-2@s">
+                    <div class="field required">
+                        <label>Status</label>
+                        <div class="ui selection dropdown on-check-project-task-checklist-dropdown">
+                            <input type="hidden" name="check_project_task_checklist" />
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Selecione...</div>
+                            <div class="menu">
+                                <div class="item" data-value="0">Pendente</div>
+                                <div class="item" data-value="1">Concluído</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Salvar</button>
+    </div>
+</div>
+
+<div class="ui small modal on-modal-delete">
+    <div class="header">Confirmar Exclusão</div>
+    <div class="content uk-text-center">
+        <p class="uk-text-meta">Você tem certeza que deseja excluir o registro?</p>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Confirmar</button>
+    </div>
+</div>

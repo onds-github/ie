@@ -1,0 +1,91 @@
+<div class="uk-panel uk-margin-bottom">
+    <ul class="uk-breadcrumb uk-light">
+        <li><a href="/account/dashboard">Início</a></li>
+        <li><span><?php echo $this->title_page ?></span></li>
+    </ul>
+</div>
+
+<div class="uk-panel uk-margin-bottom">
+    <button class="ui primary button on-button-insert">Novo Registro</button>
+</div>
+
+<div class="uk-card uk-card-body uk-card-muted uk-card-small">
+    <table class="ui inverted basic very compact table on-table-users">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>Undefined</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<div class="ui small modal on-modal-insert">
+    <div class="header">Novo usuário</div>
+    <div class="content">
+        <form class="ui form on-form-insert">
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1">
+                    <div class="field required">
+                        <label>Nome</label>
+                        <input type="text" name="name_user" />
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s">
+                    <div class="field required">
+                        <label>E-mail</label>
+                        <input type="text" name="email_user" />
+                    </div>
+                </div>
+                <div class="uk-width-1-2@s">
+                    <div class="field required">
+                        <label>Telefone</label>
+                        <input type="text" name="phone_user" class="on-mask-phone" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Confirmar</button>
+    </div>
+</div>
+
+<div class="ui small modal on-modal-delete">
+    <div class="header">Confirmar Exclusão</div>
+    <div class="content uk-text-center">
+        <p class="uk-text-meta">Você tem certeza que deseja excluir o registro?</p>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Confirmar</button>
+    </div>
+</div>
+
+<div class="ui small modal on-modal-permission">
+    <div class="header">Permissões</div>
+    <div class="content">
+        <table class="ui celled basic compact table on-table-permission">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Módulo</th>
+                    <th>Cadastro</th>
+                    <th>Atualização</th>
+                    <th>Exclusão</th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><span class="material-icons">close</span> Cancelar</button>
+    </div>
+</div>

@@ -1,0 +1,139 @@
+<div class="uk-panel uk-margin-bottom">
+    <ul class="uk-breadcrumb uk-light">
+        <li><a href="/account/dashboard">Início</a></li>
+        <li><span><?php echo $this->title_page ?></span></li>
+    </ul>
+</div>
+
+<div class="uk-panel uk-margin-bottom">
+    <button class="ui primary button on-button-insert">Novo Registro</button>
+</div>
+
+<div class="uk-card uk-card-body uk-card-muted uk-card-small">
+    <table class="ui inverted basic very compact table on-table-team">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<div class="ui small modal on-modal-insert">
+    <div class="header">Novo Registro</div>
+    <div class="content">
+        <form class="ui form on-form-insert">
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1@s">
+                    <div class="field required">
+                        <label>Título</label>
+                        <input type="text" name="title_team" minlength="20" maxlength="70" />
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1@s">
+                    <div class="field required">
+                        <label>Descrição</label>
+                        <input type="text" name="description_team" minlength="70" maxlength="160" />
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1@s">
+                    <div class="field required">
+                        <label>Conteúdo</label>
+                        <textarea name="content_team"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1@s">
+                    <div class="field required">
+                        <label>Link da Imagem</label>
+                        <input type="text" name="image_team" />
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1@s">
+                    <div class="field required">
+                        <label>Slug</label>
+                        <input type="text" name="slug_team" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Salvar</button>
+    </div>
+</div>
+
+
+<div class="ui small modal on-modal-update">
+    <div class="header">Atualizar Registro</div>
+    <div class="content">
+        <form class="ui form on-form-update">
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1@s">
+                    <div class="field required">
+                        <label>Título</label>
+                        <input type="text" name="title_team" minlength="20" maxlength="70" />
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1@s">
+                    <div class="field required">
+                        <label>Descrição</label>
+                        <input type="text" name="description_team" minlength="70" maxlength="160" />
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1@s">
+                    <div class="field required">
+                        <label>Conteúdo</label>
+                        <textarea name="content_team"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1@s">
+                    <div class="field required">
+                        <label>LInk da Imagem</label>
+                        <input type="text" name="image_team" />
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-1@s">
+                    <div class="field required">
+                        <label>Slug</label>
+                        <input type="text" name="slug_team" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Salvar</button>
+    </div>
+</div>
+
+<div class="ui small modal on-modal-delete">
+    <div class="header">Confirmar Exclusão</div>
+    <div class="content uk-text-center">
+        <p class="uk-text-meta">Você tem certeza que deseja excluir o registro?</p>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Confirmar</button>
+    </div>
+</div>

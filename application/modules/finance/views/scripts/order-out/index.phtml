@@ -1,0 +1,268 @@
+<div class="uk-panel uk-margin-bottom">
+    <ul class="uk-breadcrumb uk-light">
+        <li><a href="/account/dashboard">Início</a></li>
+        <li><span><?php echo $this->title_page ?></span></li>
+    </ul>
+</div>
+
+<div class="uk-panel uk-margin-bottom">
+    <button class="ui primary button on-button-insert">Novo Registro</button>
+</div>
+
+<div class="uk-card uk-card-body uk-card-muted uk-card-small uk-margin-bottom">
+    <form class="ui form">
+        <div class="uk-grid-small" uk-grid>
+            <div class="uk-width-1-3@s">
+                <div class="field">
+                    <div class="ui search selection fluid dropdown button on-contact-dropdown-filter">
+                        <input type="hidden" name="id_contact">
+                        <i class="dropdown icon"></i>
+                        <input type="text" class="search" tabindex="0" />
+                        <span class="sizer"></span>
+                        <div class="default text">Por fornecedor</div>
+                        <div class="menu" tabindex="-1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-1-3@s">
+                <div class="field">
+                    <div class="ui search selection fluid dropdown button on-account-dropdown-filter">
+                        <input type="hidden" name="id_account" />
+                        <i class="dropdown icon"></i>
+                        <input type="text" class="search" tabindex="0" />
+                        <span class="sizer"></span>
+                        <div class="default text">Por conta</div>
+                        <div class="menu" tabindex="-1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-1-3@s">
+                <div class="field">
+                    <div class="ui fluid secondary buttons">
+                        <div class="ui icon button on-button-filter-period-prev"><i class="chevron left icon"></i></div>
+                        <div class="ui floating dropdown button uk-text-center on-button-filter-period">
+                            <span class="text">...</span>
+                            <div class="menu">
+                                <div class="item" data-value="1">Por dia</div>
+                                <div class="item" data-value="2">Por semana</div>
+                                <div class="item" data-value="3">Por mês</div>
+                                <div class="divider"></div>
+                                <div class="header">
+                                    <i class="calendar icon"></i>
+                                    Personalizado
+                                </div>
+                                <div class="ui input">
+                                    <form class="ui form on-form-filter-period">
+                                        <input type="hidden" name="id_filter_period" value="4" />
+                                        <div class="field">
+                                            <input type="date" name="filter_period_min" placeholder="De" />
+                                        </div>
+                                        <div class="field">
+                                            <input type="date" name="filter_period_max" placeholder="Até" />
+                                        </div>
+                                        <div class="field">
+                                            <button class="ui primary fluid button">Filtrar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui icon button on-button-filter-period-next"><i class="chevron right icon"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="uk-card uk-card-body uk-card-muted uk-card-small">
+    <table class="ui inverted very basic compact table on-table-order-out">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th></th> 
+                <th>Descrição</th>
+                <th>Fornecedor</th>
+                <th>Conta</th>
+                <th>Vencimento</th>
+                <th>Valor</th>
+                <th>Status</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th></th>
+                <th></th> 
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th> 
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<div class="ui modal on-modal-insert">
+    <div class="header">Novo Registro</div>
+    <div class="content">
+        <form class="ui form on-form-insert">
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s">
+                    <div class="field required">
+                        <label>Descrição</label>
+                        <input type="text" name="description_order_out" maxlength="256" />
+                    </div>
+                </div>
+                <div class="uk-width-1-2@s">
+                    <div class="field required">
+                        <label>Fornecedor</label>
+                        <div class="ui search selection dropdown on-contact-dropdown">
+                            <input type="hidden" name="id_contact">
+                            <i class="dropdown icon"></i>
+                            <input type="text" class="search" tabindex="0" />
+                            <span class="sizer"></span>
+                            <div class="default text">Selecione...</div>
+                            <div class="menu" tabindex="-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-3@s">
+                    <div class="field required">
+                        <label>Vencimento</label>
+                        <input type="date" name="date_due_order_out" />
+                    </div>
+                </div>
+                <div class="uk-width-1-3@s">
+                    <div class="field required">
+                        <label>Conta</label>
+                        <div class="ui search selection dropdown on-account-dropdown">
+                            <input type="hidden" name="id_account">
+                            <i class="dropdown icon"></i>
+                            <input type="text" class="search" tabindex="0" />
+                            <span class="sizer"></span>
+                            <div class="default text">Selecione...</div>
+                            <div class="menu" tabindex="-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-3@s">
+                    <div class="field required">
+                        <label>Centro de Custo</label>
+                        <div class="ui search selection dropdown on-cost-center-dropdown">
+                            <input type="hidden" name="id_cost_center">
+                            <i class="dropdown icon"></i>
+                            <input type="text" class="search" tabindex="0" />
+                            <span class="sizer"></span>
+                            <div class="default text">Selecione...</div>
+                            <div class="menu" tabindex="-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s">
+                    <div class="field required">
+                        <label>Valor</label>
+                        <input type="text" name="price_order_out" class="on-mask-money" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Salvar</button>
+    </div>
+</div>
+
+<div class="ui modal on-modal-update">
+    <div class="header">Atualizar Registro</div>
+    <div class="content">
+        <form class="ui form on-form-update">
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s">
+                    <div class="field required">
+                        <label>Descrição</label>
+                        <input type="text" name="description_order_out" maxlength="256" />
+                    </div>
+                </div>
+                <div class="uk-width-1-2@s">
+                    <div class="field required">
+                        <label>Fornecedor</label>
+                        <div class="ui search selection dropdown on-contact-dropdown">
+                            <input type="hidden" name="id_contact">
+                            <i class="dropdown icon"></i>
+                            <input type="text" class="search" tabindex="0" />
+                            <span class="sizer"></span>
+                            <div class="default text">Selecione...</div>
+                            <div class="menu" tabindex="-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-3@s">
+                    <div class="field required">
+                        <label>Vencimento</label>
+                        <input type="date" name="date_due_order_out" />
+                    </div>
+                </div>
+                <div class="uk-width-1-3@s">
+                    <div class="field required">
+                        <label>Conta</label>
+                        <div class="ui search selection dropdown on-account-dropdown">
+                            <input type="hidden" name="id_account">
+                            <i class="dropdown icon"></i>
+                            <input type="text" class="search" tabindex="0" />
+                            <span class="sizer"></span>
+                            <div class="default text">Selecione...</div>
+                            <div class="menu" tabindex="-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-1-3@s">
+                    <div class="field required">
+                        <label>Centro de Custo</label>
+                        <div class="ui search selection dropdown on-cost-center-dropdown">
+                            <input type="hidden" name="id_cost_center">
+                            <i class="dropdown icon"></i>
+                            <input type="text" class="search" tabindex="0" />
+                            <span class="sizer"></span>
+                            <div class="default text">Selecione...</div>
+                            <div class="menu" tabindex="-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s">
+                    <div class="field required">
+                        <label>Valor</label>
+                        <input type="text" name="price_order_out" class="on-mask-money" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Salvar</button>
+    </div>
+</div>
+
+<div class="ui small modal on-modal-delete">
+    <div class="header">Confirmar Exclusão</div>
+    <div class="content uk-text-center">
+        <p class="uk-text-meta">Você tem certeza que deseja excluir o registro?</p>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Confirmar</button>
+    </div>
+</div>

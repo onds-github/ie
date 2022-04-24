@@ -1,0 +1,93 @@
+<?php echo $this->doctype('HTML5') ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+
+<head>
+
+    <?php
+    echo $this->headTitle($this->title_page);
+
+    echo $this->headMeta()
+        ->appendName('viewport', 'width=device-width, initial-scale=1')
+        ->setHttpEquiv('Content-Type', 'text/html;charset=UTF-8')
+        ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ->appendHttpEquiv('language', 'pt-BR')
+        ->appendName('robots', 'index, follow')
+        ->appendName('title', $this->title)
+        ->appendName('description', $this->description_page);
+
+    echo $this->headLink()
+        ->appendStylesheet('/public/assets/addons/semantic/semantic.min.css')
+        ->appendStylesheet('/public/assets/addons/datatables/dataTables.semantic.min.css')
+        ->appendStylesheet('/public/assets/addons/datatables/dataTables.select.min.css')
+        ->appendStylesheet('/public/assets/addons/datatables/dataTables.buttons.min.css')
+        ->appendStylesheet('/public/assets/css/style.share.css?v=' . time());
+    ?>
+    <!-- Search Engine -->
+    <meta name="image" content="/public/assets/images/logotipo/logotipo.svg" />
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="<?php echo $this->title_page ?>" />
+    <meta itemprop="description" content="<?php echo $this->description_page ?>" />
+    <meta name="image" content="/public/assets/images/logotipo/logotipo.svg" />
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="<?php echo $this->title_page ?>" />
+    <meta name="og:description" content="<?php echo $this->title_page ?>" />
+    <meta name="image" content="/public/assets/images/logotipo/logotipo.svg" />
+    <meta name="og:url" content="https://onds.com.br" />
+    <meta name="og:site_name" content="<?php echo $this->title_page ?>" />
+    <meta name="og:locale" content="pt_BR" />
+    <meta name="fb:admins" content="onds.agenciadigital" />
+    <meta name="og:type" content="website" />
+    <link rel="icon" href="/public/assets/images/logotipo/logotipo.svg" />
+</head>
+
+<body>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "ONDS - Agência Digital",
+            "url": "https://onds.com.br/",
+            "address": "Rua Elias Antonio Zogbi, 150. Santo Amaro. São Paulo - SP. 04746-115",
+            "sameAs": [
+                "https://www.facebook.com/onds.agenciadigital/",
+                "https://www.instagram.com/onds.agenciadigital/",
+                "https://www.linkedin.com/company/onds-agenciadigital"
+            ]
+        }
+    </script>
+
+    <div class="ui container">
+        <div class="ui padded grid stackable">
+            <?php echo $this->layout()->content; ?>
+        </div>
+    </div>
+    <?php
+    echo $this->headScript()
+                ->prependFile('/public/assets/addons/numeral/numeral-locales.js')
+                ->prependFile('/public/assets/addons/numeral/numeral.min.js')
+                ->prependFile('/public/assets/addons/moment/moment-locales.js')
+                ->prependFile('/public/assets/addons/moment/moment.min.js')
+                ->appendFile('https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js')
+                ->prependFile('/public/assets/addons/datatables/dataTables.jszip.min.js')
+                ->prependFile('/public/assets/addons/datatables/dataTables.vfs_fonts.min.js')
+                ->prependFile('/public/assets/addons/datatables/dataTables.pdfmake.min.js')
+                ->prependFile('/public/assets/addons/datatables/dataTables.buttons.colVis.min.js')
+                ->prependFile('/public/assets/addons/datatables/dataTables.buttons.html5.min.js')
+                ->prependFile('/public/assets/addons/datatables/dataTables.buttons.min.js')
+                ->prependFile('/public/assets/addons/datatables/dataTables.select.min.js')
+                ->prependFile('/public/assets/addons/datatables/dataTables.rowgroup.min.js')
+                ->prependFile('/public/assets/addons/datatables/dataTables.sorting.min.js')
+                ->prependFile('/public/assets/addons/datatables/dataTables.semantic.min.js')
+                ->prependFile('/public/assets/addons/datatables/dataTables.default.min.js')
+        ->prependFile('/public/assets/addons/semantic/semantic.min.js')
+        ->prependFile('/public/config/default.js')
+        ->prependFile('/public/assets/addons/mask/mask.min.js')
+        ->prependFile('/public/assets/addons/jquery/jquery.min.js');
+    ?>
+
+
+
+
+</body>
+
+</html>

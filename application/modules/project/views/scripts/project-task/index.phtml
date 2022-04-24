@@ -1,0 +1,219 @@
+<div class="row">
+    <div class="column">
+        <div class="ui breadcrumb">
+            <a class="section" href="/account/dashboard">Início</a>
+            <div class="divider"> / </div>
+            <div class="active section"><?php echo $this->title_page ?></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="column">
+        <div class="ui segment">
+            <table class="ui table" id="onTableProjectTask">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Criado</th>
+                    </tr>
+                </thead>
+
+<tbody>
+    <tr>
+        <td>
+            <div class="ui placeholder">
+                <div class="paragraph">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="ui placeholder">
+                <div class="paragraph">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="ui placeholder">
+                <div class="paragraph">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="ui placeholder">
+                <div class="paragraph">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="ui placeholder">
+                <div class="paragraph">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="ui placeholder">
+                <div class="paragraph">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="ui placeholder">
+                <div class="paragraph">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="ui placeholder">
+                <div class="paragraph">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="ui placeholder">
+                <div class="paragraph">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </td>
+        <td>
+            <div class="ui placeholder">
+                <div class="paragraph">
+                    <div class="line"></div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="ui small modal" id="onModalCreate">
+    <div class="header">Novo Registro</div>
+    <div class="content">
+        <form class="ui equal width form">
+            <div class="fields">
+                <div class="field required">
+                    <label>Descrição</label>
+                    <input type="text" name="project_task_name" maxlength="518" />
+                </div>
+                <!-- <div class="field required">
+                    <label>Projeto</label>
+                    <div class="ui search selection dropdown on-project-dropdown">
+                        <input type="hidden" name="project_id">
+                        <i class="dropdown icon"></i>
+                        <input type="text" class="search" tabindex="0" />
+                        <span class="sizer"></span>
+                        <div class="default text">Selecione...</div>
+                        <div class="menu" tabindex="-1"></div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="fields">
+                <!-- <div class="field required">
+                    <label>Status</label>
+                    <div class="ui search selection dropdown on-project-task-status-dropdown">
+                        <input type="hidden" name="project_task_status_id">
+                        <i class="dropdown icon"></i>
+                        <input type="text" class="search" tabindex="0" />
+                        <span class="sizer"></span>
+                        <div class="default text">Selecione...</div>
+                        <div class="menu" tabindex="-1"></div>
+                    </div>
+                </div> -->
+                <!-- <div class="field required">
+                    <label>Início</label>
+                    <input type="date" name="started_at" />
+                </div>
+                <div class="field required">
+                    <label>Conclusão</label>
+                    <input type="date" name="finished_at" />
+                </div> -->
+            </div>
+            <div class="fields">
+                <div class="field">
+                    <label>Observação</label>
+                    <textarea name="project_task_observation" rows="3"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Salvar</button>
+    </div>
+</div>
+
+<div class="ui small modal" id="onModalUpdate">
+    <div class="header">Atualizar Registro</div>
+    <div class="content">
+        <form class="ui equal width form">
+            <div class="fields">
+                <div class="field required">
+                    <label>Descrição</label>
+                    <input type="text" name="project_task_name" maxlength="128" />
+                </div>
+                <!-- <div class="field required">
+                    <label>Projeto</label>
+                    <div class="ui search selection dropdown on-project-dropdown">
+                        <input type="hidden" name="id_project">
+                        <i class="dropdown icon"></i>
+                        <input type="text" class="search" tabindex="0" />
+                        <span class="sizer"></span>
+                        <div class="default text">Selecione...</div>
+                        <div class="menu" tabindex="-1"></div>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <div class="fields">
+                <div class="field required">
+                    <label>Status</label>
+                    <div class="ui search selection dropdown on-project-task-status-dropdown">
+                        <input type="hidden" name="id_project_task_status">
+                        <i class="dropdown icon"></i>
+                        <input type="text" class="search" tabindex="0" />
+                        <span class="sizer"></span>
+                        <div class="default text">Selecione...</div>
+                        <div class="menu" tabindex="-1"></div>
+                    </div>
+                </div>
+                <div class="field required">
+                    <label>Início</label>
+                    <input type="date" name="date_start_project_task" />
+                </div>
+                <div class="field required">
+                    <label>Término</label>
+                    <input type="date" name="date_finish_project_task" />
+                </div>
+            </div> -->
+            <div class="fields">
+                <div class="field">
+                    <label>Observação</label>
+                    <textarea name="project_task_observation" rows="3"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Salvar</button>
+    </div>
+</div>

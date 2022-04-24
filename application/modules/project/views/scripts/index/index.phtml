@@ -1,0 +1,102 @@
+<div class="row">
+    <div class="column">
+        <div class="ui breadcrumb">
+            <a class="section" href="/account/dashboard">Início</a>
+            <div class="divider"> / </div>
+            <div class="active section"><?php echo $this->title_page ?></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="column">
+        <div class="ui segment">
+            <table class="ui table" id="onTableProject">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Criado</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="ui placeholder">
+                                <div class="paragraph">
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="ui placeholder">
+                                <div class="paragraph">
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="ui small modal" id="onModalCreate">
+    <div class="header">Novo registro</div>
+    <div class="content">
+        <form class="ui equal width form">
+            <div class="fields">
+                <div class="field required">
+                    <label>Nome</label>
+                    <input type="text" name="project_name" maxlength="128" />
+                </div>
+                <!-- <div class="field required">
+                    <label>Cliente</label>
+                    <div class="ui search selection dropdown on-dropdown-contact">
+                        <input type="hidden" name="id_contact">
+                        <i class="dropdown icon"></i>
+                        <input type="text" class="search" tabindex="0" />
+                        <span class="sizer"></span>
+                        <div class="default text">Selecione...</div>
+                        <div class="menu" tabindex="-1"></div>
+                    </div>
+                </div> -->
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Salvar</button>
+    </div>
+</div>
+
+
+<div class="ui small modal" id="onModalUpdate">
+    <div class="header">Atualizar Registro</div>
+    <div class="content">
+        <form class="ui equal width form">
+            <div class="fields">
+                <div class="field required">
+                    <label>Nome</label>
+                    <input type="text" name="name_project" maxlength="256" />
+                </div>
+                <div class="field required">
+                    <label>Cliente</label>
+                    <div class="ui search selection dropdown on-dropdown-contact">
+                        <input type="hidden" name="id_contact">
+                        <i class="dropdown icon"></i>
+                        <input type="text" class="search" tabindex="0" />
+                        <span class="sizer"></span>
+                        <div class="default text">Selecione...</div>
+                        <div class="menu" tabindex="-1"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="actions">
+        <button class="ui labeled icon secondary deny button"><i class="close icon"></i> Cancelar</button>
+        <button class="ui labeled icon primary ok button"><i class="check icon"></i> Salvar</button>
+    </div>
+</div>

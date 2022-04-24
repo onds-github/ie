@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="/public/assets/addons/semantic/semantic.min.css" />
+        <!--<link rel="stylesheet" href="/public/assets/addons/uikit/uikit.min.css" />-->
+
+        <link rel="stylesheet" href="/public/assets/addons/datatables/dataTables.semantic.min.css" />
+        <link rel="stylesheet" href="/public/assets/addons/datatables/dataTables.select.min.css" />
+        <link rel="stylesheet" href="/public/assets/addons/datatables/dataTables.buttons.min.css" />
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.css">
+
+
+        <!----======== CSS ======== -->
+        <link rel="stylesheet" href="/public/assets/addons/oncode/css/default.css?v=<?php echo time() ?>">
+
+        <!----===== Boxicons CSS ===== -->
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Dashboard - on360</title> 
+    </head>
+    <body>
+        <nav class="sidebar close">
+            <header>
+                <div class="image-text">
+                    <span class="image">
+                        <!--<img src="logo.png" alt="">-->
+                    </span>
+
+                    <div class="text logo-text">
+                        <span class="name">on360</span>
+                        <span class="profession">Gestão de Marketing</span>
+                    </div>
+                </div>
+
+                <i class='bx bx-chevron-right toggle'></i>
+            </header>
+
+
+
+            <!--sidebar-->
+            <!-- <div class="ui sidebar vertical left menu overlay borderless visible sidemenu inverted secondary <?php echo (Zend_Auth::getInstance()->getIdentity()->menu_user == 1 ? 'isMenuSmall' : 'isMenuLarge') ?>">
+                <a class="item logo" href="/account/dashboard">
+                    <span class="logotipo">On' Panel</span>
+                </a>
+                
+                <div class="ui divider"></div>
+                <a class="<?php echo ($this->id_module == 0 ? 'active' : '') ?> item" href="/account/dashboard">
+                    <span class="<?php echo (Zend_Auth::getInstance()->getIdentity()->menu_user == 1 ? 'isMenuNoLargeVisible' : 'isMenuLargeVisible') ?>">Visão geral</span>
+                    <i class="home icon"></i>
+                </a>
+                <a class="<?php echo ($this->id_module == 1 ? 'active' : '') ?> item" href="/account/contact">
+                    <span class="<?php echo (Zend_Auth::getInstance()->getIdentity()->menu_user == 1 ? 'isMenuNoLargeVisible' : 'isMenuLargeVisible') ?>">Contatos</span>
+                    <i class="users icon"></i>
+                </a>
+                <a class="<?php echo ($this->id_module == 99 ? 'active' : '') ?> item" href="/website/post">
+                    <span class="<?php echo (Zend_Auth::getInstance()->getIdentity()->menu_user == 1 ? 'isMenuNoLargeVisible' : 'isMenuLargeVisible') ?>">Blog</span>
+                    <i class="newspaper icon"></i>
+                </a>
+                
+                <div class="ui divider"></div>
+                <a class="<?php echo ($this->id_module == 100 ? 'active' : '') ?> item" href="/finance/order">
+                    <span class="<?php echo (Zend_Auth::getInstance()->getIdentity()->menu_user == 1 ? 'isMenuNoLargeVisible' : 'isMenuLargeVisible') ?>">Lançamentos</span>
+                    <i class="file alternate outline icon"></i>
+                </a>
+
+                <a class="<?php echo ($this->id_module == 101 ? 'active' : '') ?> item" href="/finance/category">
+                    <span class="<?php echo (Zend_Auth::getInstance()->getIdentity()->menu_user == 1 ? 'isMenuNoLargeVisible' : 'isMenuLargeVisible') ?>">Categorias</span>
+                    <i class="tags icon"></i>
+                </a>
+
+                <a class="<?php echo ($this->id_module == 102 ? 'active' : '') ?> item" href="/finance/account">
+                    <span class="<?php echo (Zend_Auth::getInstance()->getIdentity()->menu_user == 1 ? 'isMenuNoLargeVisible' : 'isMenuLargeVisible') ?>">Contas</span>
+                    <i class="dollar sign icon"></i>
+                </a>
+
+                <a class="<?php echo ($this->id_module == 103 ? 'active' : '') ?> item" href="/finance/service">
+                    <span class="<?php echo (Zend_Auth::getInstance()->getIdentity()->menu_user == 1 ? 'isMenuNoLargeVisible' : 'isMenuLargeVisible') ?>">Serviços</span>
+                    <i class="cogs icon"></i>
+                </a>
+
+                <a class="<?php echo ($this->id_module == 104 ? 'active' : '') ?> item" href="/finance/order-service">
+                    <span class="<?php echo (Zend_Auth::getInstance()->getIdentity()->menu_user == 1 ? 'isMenuNoLargeVisible' : 'isMenuLargeVisible') ?>">Ordens de Serviços</span>
+                    <i class="clipboard icon"></i>
+                </a>
+                
+                <div class="ui divider"></div>
+                
+                <a class="<?php echo ($this->id_module == 5 ? 'active' : '') ?> item" href="/project">
+                    <span class="<?php echo (Zend_Auth::getInstance()->getIdentity()->menu_user == 1 ? 'isMenuNoLargeVisible' : 'isMenuLargeVisible') ?>">Projetos</span>
+                    <i class="exchange icon"></i>
+                </a>
+                
+                <a class="<?php echo ($this->id_module == 6 ? 'active' : '') ?> item" href="/project/project-task">
+                    <span class="<?php echo (Zend_Auth::getInstance()->getIdentity()->menu_user == 1 ? 'isMenuNoLargeVisible' : 'isMenuLargeVisible') ?>">Tarefas</span>
+                    <i class="sticky note outline icon"></i>
+                </a>
+                
+                <a class="<?php echo ($this->id_module == 6 ? 'active' : '') ?> item" href="/project/project-task-status">
+                    <span class="<?php echo (Zend_Auth::getInstance()->getIdentity()->menu_user == 1 ? 'isMenuNoLargeVisible' : 'isMenuLargeVisible') ?>">Status</span>
+                    <i class="sticky note outline icon"></i>
+                </a>
+            </div>
+               -->
+
+
+
+            <div class="menu-bar">
+                <div class="menu">
+
+                    <li class="search-box">
+                        <i class="bx bx-search icon"></i>
+                        <input type="text" placeholder="Buscar...">
+                    </li>
+
+                    <ul class="menu-links">
+                        <li class="nav-link">
+                            <a href="/account/dashboard">
+                                <i class="bx bx-home-alt icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="/account/contact">
+                                <i class="bx bx-group icon" ></i>
+                                <span class="text nav-text">Contatos</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="/account/tags">
+                                <i class="bx bx-tag icon"></i>
+                                <span class="text nav-text">Tags</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bx-pie-chart-alt icon' ></i>
+                                <span class="text nav-text">Formulários</span>
+                                <i class='bx bx-lock-alt icon' ></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class='bx bx-user-pin icon' ></i>
+                                <span class="text nav-text">Persona</span>
+                                <i class='bx bx-lock-alt icon' ></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class="bx bx-heart icon"></i>
+                                <span class="text nav-text">Blog</span>
+                                <i class='bx bx-lock-alt icon' ></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a href="#">
+                                <i class="bx bx-file icon"></i>
+                                <span class="text nav-text">LGPD</span>
+                                <i class='bx bx-lock-alt icon' ></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="bottom-content">
+                    <li class="">
+                        <a href="#">
+                            <i class='bx bx-log-out icon' ></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+
+                    <li class="mode">
+                        <div class="sun-moon">
+                            <i class='bx bx-moon icon moon'></i>
+                            <i class='bx bx-sun icon sun'></i>
+                        </div>
+                        <span class="mode-text text">Dark mode</span>
+
+                        <div class="toggle-switch">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+
+                </div>
+            </div>
+
+        </nav>
+
+        <section class="home">
+            <div class="text">Dashboard Sidebar</div>
+            <div class="content">
+                <?php echo $this->layout()->content; ?>
+            </div>
+        </section>
+
+        <script type="text/javascript" src="/public/assets/addons/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/semantic/semantic.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/contextmenu/contextmenu.min.js"></script>
+        <!--<script type="text/javascript" src="/public/assets/addons/uikit/js/uikit-icons.min.js"></script>-->
+
+
+        <script type="text/javascript" src="/public/config/default.js"></script>
+        
+        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.default.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.semantic.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.sorting.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.rowgroup.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.select.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.buttons.html5.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.buttons.colVis.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.pdfmake.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.vfs_fonts.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/datatables/dataTables.jszip.min.js"></script>
+        
+        
+        <script type="text/javascript" src="/public/assets/addons/moment/moment.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/moment/moment-locales.js"></script>
+
+        <script type="text/javascript" src="/public/assets/addons/numeral/numeral.min.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/numeral/numeral-locales.js"></script>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.contextMenu.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-contextmenu/2.7.1/jquery.ui.position.js"></script>
+        
+        
+        <script type="text/javascript" src="/public/assets/addons/oncrud/script.onFilter.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/oncrud/script.onCreate.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/oncrud/script.onUpdate.js"></script>
+        <script type="text/javascript" src="/public/assets/addons/oncrud/script.onDelete.js"></script>
+                
+                
+                
+        
+        
+        
+        <?php
+            echo $this->headScript();
+        ?>
+
+
+<script>
+            const body = document.querySelector('body'),
+                    sidebar = body.querySelector('nav'),
+                    toggle = body.querySelector(".toggle"),
+                    searchBtn = body.querySelector(".search-box"),
+                    modeSwitch = body.querySelector(".toggle-switch"),
+                    modeText = body.querySelector(".mode-text");
+
+
+
+            if (getCookie('mode') == 'dark') {
+                body.classList.toggle("dark");
+            }
+
+            toggle.addEventListener("click", () => {
+                sidebar.classList.toggle("close");
+            })
+
+            searchBtn.addEventListener("click", () => {
+                sidebar.classList.remove("close");
+            })
+
+            modeSwitch.addEventListener("click", () => {
+                body.classList.toggle("dark");
+
+                if (body.classList.contains("dark")) {
+                    modeText.innerText = "Light mode";
+                    setCookie('mode', 'dark', 365);
+                } else {
+                    modeText.innerText = "Dark mode";
+                    setCookie('mode', 'light', 365);
+                }
+            });
+        </script>
+
+    </body>
+</html>

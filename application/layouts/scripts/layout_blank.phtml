@@ -1,0 +1,38 @@
+<?php echo $this->doctype('HTML5') ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-BR">
+    <head>
+        <?php
+        echo $this->headTitle($this->title);
+
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1')
+                ->setHttpEquiv('Content-Type', 'text/html;charset=UTF-8')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+                ->appendHttpEquiv('language', 'pt-BR')
+                ->appendName('robots', 'noindex, nofollow')
+                ->appendName('title', $this->title)
+                ->appendName('description', $this->description);
+
+        echo $this->headLink()
+                ->appendStylesheet('/public/assets/addons/semantic/semantic.min.css')
+                ->appendStylesheet('/public/assets/addons/uikit/uikit.min.css')
+                ->appendStylesheet('/public/assets/css/style.default.css');
+        ?>
+    </head>
+    <body>
+
+        <?php echo $this->layout()->content; ?>
+
+
+        <?php
+        echo $this->headScript()
+                ->prependFile('/public/config/default.js')
+                ->prependFile('/public/assets/addons/uikit/uikit-icons.min.js')
+                ->prependFile('/public/assets/addons/uikit/uikit.min.js')
+                ->prependFile('/public/assets/addons/semantic/semantic.min.js')
+                ->prependFile('/public/assets/addons/mask/mask.min.js')
+                ->prependFile('/public/assets/addons/jquery/jquery.min.js');
+        ?>
+
+    </body>
+</html>
