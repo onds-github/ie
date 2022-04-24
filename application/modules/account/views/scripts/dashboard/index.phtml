@@ -1,16 +1,24 @@
 <div class="uk-section">
     <div uk-grid>
         <div class="uk-width-1-2">
-            <h1 class="uk-h1 uk-text-primary">
-                Bem vindo<br />
-                <?php echo Zend_Auth::getInstance()->getIdentity()->name_user ?>
+            <h1 class="uk-h1 uk-text-uppercase"> uk-text-primary">
+                Bem vindo
             </h1>
+            <p class="uk-text-lead uk-text-uppercase uk-text-primary">
+                <?php echo Zend_Auth::getInstance()->getIdentity()->name_user ?>
+            </p>
             <a class="uk-link uk-text-primary" href="/account/user">Ficha completa</a>
-            <h2 class="uk-h2 uk-text-primary">Conquistas</h2>
+            <h2 class="uk-h2 uk-text-uppercase uk-text-primary">Conquistas</h2>
             <ul class="uk-list uk-text-primary">
                 <li>TOP SELLER JANEIRO</li>
                 <li>CAMPANHA BLACK WEEK</li>
                 <li>TOP SELLER DEZEMBRO</li>
+            </ul>
+            <h2 class="uk-h2 uk-text-uppercase uk-text-primary">Prêmios Obtidos</h2>
+            <ul class="uk-list uk-text-primary">
+                <li>BÔNUS NO CARTÃO R$ 500</li>
+                <li>VIAGEM FLORIANOPOLIS</li>
+                <li>KIT SCM GOLD</li>
             </ul>
         </div>
         <div class="uk-width-1-2">
@@ -32,6 +40,7 @@
                 </div>
                 <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
             </div>
+            <a class="uk-link uk-text-primary">CLIQUE SAIBA AS REGRAS E SE INSCREVA</a>
         </div>
     </div>
 </div>
