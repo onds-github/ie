@@ -1,76 +1,51 @@
-<div class="uk-grid-small" uk-grid>
-    <div class="uk-width-expand@s">
-        <div class="uk-card uk-card-body uk-card-muted uk-card-small uk-margin-bottom">
-            <form class="ui form on-form-user" autocomplete="off">
-                <div class="uk-grid-small" uk-grid>
-                    <div class="uk-width-1-2@s">
-                        <div class="field">
-                            <label>Nome</label>
-                            <input type="text" name="name_user" />
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-grid-small" uk-grid>
-                    <div class="uk-width-1-1">
-                        <div class="field">
-                            <label>E-mail</label>
-                            <input type="text" name="email_user" />
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-grid-small" uk-grid>
-                    <div class="uk-width-1-1">
-                        <div class="field">
-                            <label>Telefone</label>
-                            <input type="text" name="phone_user" class="on-mask-phone" />
-                        </div>
-                    </div>
-                </div>
-                <hr class="uk-divider-small" />
-                <div class="uk-grid-small" uk-grid>
-                    <div class="uk-width-1-1">
-                        <div class="field">
-                            <button class="ui primary disabled button">Salvar</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <div class="uk-card uk-card-body uk-card-muted uk-card-small">
-            <form class="ui form on-form-security">
-                <div class="uk-grid-small" uk-grid>
-                    <div class="uk-width-1-1">
-                        <div class="field">
-                            <label>Nova senha</label>
-                            <input type="password" name="password_user" />
-                        </div>
-                    </div>
-                </div>
-                <div class="uk-grid-small" uk-grid>
-                    <div class="uk-width-1-1">
-                        <div class="field">
-                            <label>Confirmar senha</label>
-                            <input type="password" name="cpassword_user" />
-                        </div>
-                    </div>
-                </div>
-                <hr class="uk-divider-small" />
-                <div class="uk-grid-small" uk-grid>
-                    <div class="uk-width-1-1">
-                        <div class="field">
-                            <button class="ui primary disabled button">Salvar</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
+<div class="uk-section">
+    <div uk-grid>
+        <div class="uk-width-1-1">
+            <h1 class="uk-h1 uk-text-uppercase uk-text-primary uk-margin-remove-bottom">
+                Perfil do usuário
+            </h1>
         </div>
     </div>
-    <div class="uk-width-medium@s">
-        <div class="uk-card uk-card-body uk-card-muted uk-card-small">
-            <img class="ui centered circular image image_user" src="https://img.icons8.com/pastel-glyph/64/000000/name.png" alt="Imagem do contato"/>
-            <hr class="uk-divider-small" />
-            <input type="file" name="image_user" class="on-filepond" />
+
+    <div class="uk-grid-small" uk-grid>
+        <div class="uk-width-expand@s">
+            <div class="uk-card uk-card-body uk-card-muted uk-card-small uk-margin-bottom">
+                <form class="ui form on-form-user" autocomplete="off">
+                    <div class="uk-grid-small" uk-grid>
+                        <div class="uk-width-1-2@s">
+                            <div class="field">
+                                <label>Nome</label>
+                                <input type="text" name="name_user" value="<?php echo Zend_Auth::getInstance()->getIdentity()->name_user ?>" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small" uk-grid>
+                        <div class="uk-width-1-1">
+                            <div class="field">
+                                <label>E-mail</label>
+                                <input type="text" name="email_user" value="<?php echo Zend_Auth::getInstance()->getIdentity()->email_user ?>" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small" uk-grid>
+                        <div class="uk-width-1-1">
+                            <div class="field">
+                                <label>Telefone</label>
+                                <input type="text" name="phone_user" class="on-mask-phone" value="<?php echo Zend_Auth::getInstance()->getIdentity()->phone_user ?>" />
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="uk-divider-small" />
+                    <div class="uk-grid-small" uk-grid>
+                        <div class="uk-width-1-1">
+                            <div class="field">
+                                <button class="ui primary disabled button">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
         </div>
     </div>
 </div>

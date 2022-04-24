@@ -14,9 +14,7 @@ class Account_UserController extends Zend_Controller_Action {
         $this->view->title_page = 'Info. da Conta';
         $this->view->description_page = 'Gerenciamento de informações';
         
-        $this->view->headScript()
-                ->appendFile('/public/modules/account/user/script.default.js')
-                ->appendFile('/public/modules/account/user/script.security.js');
+        $this->view->headScript();
         
     }
 
