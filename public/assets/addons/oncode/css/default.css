@@ -360,3 +360,7 @@ table {
     background: var(--sidebar-color);
     color: var(--text-color);
 }
+
+.uk-h1 {
+    color: #ffd700 !important;
+}
