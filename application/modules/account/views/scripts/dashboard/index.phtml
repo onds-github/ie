@@ -1,8 +1,9 @@
 <div class="uk-section">
     <div uk-grid>
-        <div class="uk-width-1-2" <h1 class="uk-h1">
-            Bem vindo<br />
-            <?php echo Zend_Auth::getInstance()->getIdentity()->name_user ?>
+        <div class="uk-width-1-2">
+            <h1 class="uk-h1">
+                Bem vindo<br />
+                <?php echo Zend_Auth::getInstance()->getIdentity()->name_user ?>
             </h1>
             <a class="uk-link" href="/account/user">Ficha completa</a>
         </div>
