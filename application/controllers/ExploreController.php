@@ -13,10 +13,7 @@ class ExploreController extends Zend_Controller_Action {
         $this->view->title_page = 'Intercâmbio 360º';
         $this->view->description_page = 'A comunidade de viajantes e contadores de histórias';
         
-        $this->view->headLink();
-        
-        $this->view->headScript()
-                ->appendFile('/public/assets/js/script.post.js');
+        $this->view->headScript();
     }
     
     public function reviewsAction() {
