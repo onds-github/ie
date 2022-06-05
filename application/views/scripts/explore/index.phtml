@@ -27,154 +27,6 @@
                         class="dark-logo on-home-page"
                     />
                 </a>
-                <div
-                    data-node-type="commerce-cart-wrapper"
-                    data-open-product=""
-                    data-wf-cart-type="modal"
-                    data-wf-cart-query="query Dynamo2 {
-  database {
-    id
-    commerceOrder {
-      comment
-      extraItems {
-        name
-        pluginId
-        pluginName
-        price {
-          value
-          unit
-          decimalValue
-          string
-        }
-      }
-      id
-      startedOn
-      statusFlags {
-        hasDownloads
-        hasSubscription
-        isFreeOrder
-        requiresShipping
-      }
-      subtotal {
-        value
-        unit
-        decimalValue
-        string
-      }
-      total {
-        value
-        unit
-        decimalValue
-        string
-      }
-      updatedOn
-      userItems {
-        count
-        sku {
-          f__draft_0ht
-          f__archived_0ht
-          f_main_image_4dr {
-            url
-            file {
-              size
-              origFileName
-              createdOn
-              updatedOn
-              mimeType
-              width
-              height
-              variants {
-                origFileName
-                quality
-                height
-                width
-                s3Url
-                error
-                size
-              }
-            }
-            alt
-          }
-          f_sku_values_3dr {
-            property {
-              id
-            }
-            value {
-              id
-            }
-          }
-          id
-        }
-        price {
-          value
-          unit
-          decimalValue
-          string
-        }
-        product {
-          id
-          f__draft_0ht
-          f__archived_0ht
-          f_name_
-          f_sku_properties_3dr {
-            id
-            name
-            enum {
-              id
-              name
-              slug
-            }
-          }
-        }
-        id
-        rowTotal {
-          value
-          unit
-          decimalValue
-          string
-        }
-        subscriptionFrequency
-        subscriptionInterval
-        subscriptionTrial
-      }
-      userItemsCount
-    }
-  }
-  site {
-    id
-    commerce {
-      businessAddress {
-        country
-      }
-      defaultCountry
-      defaultCurrency
-      quickCheckoutEnabled
-    }
-  }
-}
-"
-                    data-wf-page-link-href-prefix=""
-                    class="w-commerce-commercecartwrapper cart-2"
-                >
-                    
-                    <div data-node-type="commerce-cart-container-wrapper" style="display: none;" class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal">
-                        <div data-node-type="commerce-cart-container" class="w-commerce-commercecartcontainer cart-container">
-                            <div class="w-commerce-commercecartheader">
-                                <h4 class="w-commerce-commercecartheading">Your Cart</h4>
-                                <a href="#" data-node-type="commerce-cart-close-link" class="w-commerce-commercecartcloselink w-inline-block">
-                                    <svg width="16px" height="16px" viewBox="0 0 16 16">
-                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                            <g fill-rule="nonzero" fill="#333333">
-                                                <polygon
-                                                    points="6.23223305 8 0.616116524 13.6161165 2.38388348 15.3838835 8 9.76776695 13.6161165 15.3838835 15.3838835 13.6161165 9.76776695 8 15.3838835 2.38388348 13.6161165 0.616116524 8 6.23223305 2.38388348 0.616116524 0.616116524 2.38388348 6.23223305 8"
-                                                ></polygon>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="right_side_navbar">
                     <nav role="navigation" class="nav-menu w-nav-menu">
@@ -185,32 +37,28 @@
                             </div>
                             <nav class="dropdown-list w-dropdown-list">
                                 <a href="/blog" class="nav_link dropdown w-inline-block">
-                                    <div class="nav_link_text">Blog</div>
+                                    <div class="nav_link_text">Publicações</div>
                                 </a>
-                                <a href="/places" class="nav_link dropdown w-inline-block"><div class="nav_link_text">Places</div></a>
-                                <a href="/traveltellers" class="nav_link dropdown w-inline-block"><div class="nav_link_text">TravelTellers</div></a>
+                                <a href="/places" class="nav_link dropdown w-inline-block"><div class="nav_link_text">Lugares</div></a>
+                                <a href="/traveltellers" class="nav_link dropdown w-inline-block"><div class="nav_link_text">Viajantes</div></a>
                                 <a href="/videos" class="nav_link dropdown w-inline-block"><div class="nav_link_text">Videos</div></a>
                             </nav>
                         </div>
-                        <a href="/blog" class="nav_link mobile-nav w-nav-link">Blog</a>
-                        <a href="/places" class="nav_link mobile-nav w-nav-link">Places</a>
-                        <a href="/traveltellers" class="nav_link mobile-nav w-nav-link">TravelTellers</a>
-                        <a href="/shop" class="nav_link w-nav-link">Shop</a>
+                        <a href="/blog" class="nav_link mobile-nav w-nav-link">Publicações</a>
+                        <a href="/places" class="nav_link mobile-nav w-nav-link">Lugares</a>
+                        <a href="/traveltellers" class="nav_link mobile-nav w-nav-link">Viajantes</a>
                         <a href="/videos" class="nav_link mobile-nav w-nav-link">Videos</a>
-                        <a href="/contact" class="nav_link w-nav-link">Contact</a>
-                        <a href="/sign-in" class="nav_link mobile-nav w-nav-link">Sign In</a>
-                        <a href="/sign-up" class="button mobile-menu w-button">Become a TravelTeller</a>
+                        <a href="/contact" class="nav_link w-nav-link">Contato</a>
+                        <a href="/sign-up" class="button mobile-menu w-button">Para viajantes</a>
                     </nav>
                     <div class="sign_in_up_wrap">
-                        <a href="/sign-in" class="nav_link w-nav-link">Sign In</a>
-                        <a href="/sign-up" class="button navbar_btn w-button">Become a TravelTeller</a>
+                        <a href="/sign-up" class="button navbar_btn w-button">Para viajantes</a>
                     </div>
                     <div class="menu-button w-nav-button">
                         <img src="https://assets.website-files.com/5ed1cf34bf802c5f339f8167/5ee748ec18269a218140b184_hamburger.svg" width="30" alt="" class="image-9" />
                     </div>
                 </div>
             </div>
-        </div>
         <div class="section hero wf-section">
             <div class="hero_slider_contain">
                 <div
