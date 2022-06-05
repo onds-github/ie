@@ -10,8 +10,8 @@ class ExploreController extends Zend_Controller_Action {
         $this->_helper->layout->setLayout('layout_preview');
         
         $this->view->page_id = '1';
-        $this->view->title_page = 'ONDS - Agência Digital';
-        $this->view->description_page = 'Somos uma Agência Digital especializada em Criar e Gerenciar Sites que ajudam no processo de coleta, organização, análise, compartilhamento e monitoramento de informações para divulgação e venda de produtos ou serviços.';
+        $this->view->title_page = 'Intercâmbio 360º';
+        $this->view->description_page = 'A comunidade de viajantes e contadores de histórias';
         
         $this->view->headLink();
         
