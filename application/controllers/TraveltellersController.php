@@ -15,7 +15,7 @@ class TraveltellersController extends Zend_Controller_Action {
         $this->view->headScript();
     }
     
-    public function TraveltellerAction() {
+    public function traveltellerAction() {
         $this->_helper->layout->setLayout('layout_preview');
         $this->view->page_id = '5ed444bba90a9ce98f220ce9';
         $this->view->title_page = 'Intercâmbio 360º';
