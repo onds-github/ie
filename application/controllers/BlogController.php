@@ -1,6 +1,6 @@
 <?php
 
-class PostController extends Zend_Controller_Action {
+class BlogController extends Zend_Controller_Action {
 
     public function init() {
     
