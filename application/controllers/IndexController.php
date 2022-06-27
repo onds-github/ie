@@ -3,7 +3,7 @@
 class IndexController extends Zend_Controller_Action {
 
     public function init() {
-    
+        $this->_helper->redirector->gotoRoute(array('controller' => 'explore', 'action' => 'index'));
     }
 
     public function indexAction() {
