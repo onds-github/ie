@@ -6,7 +6,7 @@ $(document).ready(function () {
         success: function (e) {
             console.log(e);
           $.each(e.items, function (i, v) {
-            $('.playlist-youtube').append('<li><div class="uk-panel"><img src="' + v.snippet.thumbnails.default.url + '" title="' + v.snippet.description + '" /></div></li>');
+            $('.playlist-youtube').append('<li><div class="uk-panel"><img src="' + v.snippet.thumbnails.default.url + '" title="' + v.snippet.description + '" width="' + v.snippet.thumbnails.default.width + '" height="' + v.snippet.thumbnails.default.height + '" /></div></li>');
           });
         }
       });
