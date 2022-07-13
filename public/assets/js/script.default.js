@@ -2,7 +2,7 @@ $(document).ready(function () {
     
     $.ajax({
         type: 'GET',
-        url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLIluMM1HNoRo8G1g8XwMkBUg6iaCXCqag&key=AIzaSyBAMiaNLinGMif1Lz9KeJpxPXRzJi30y9M',
+        url: 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLIluMM1HNoRo_2sf28os_XeigLqB8ZP9B&key=AIzaSyBAMiaNLinGMif1Lz9KeJpxPXRzJi30y9M',
         success: function (e) {
             console.log(e);
           $.each(e.items, function (i, v) {
